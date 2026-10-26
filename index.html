@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DondeRichard · Reserva tu cita (maqueta)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/poste.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0a0a0b">
+</head>
+<body>
+  <header>
+    <div class="cartel">
+      <div class="cartel-marco" aria-hidden="true">
+        <span class="esquina si"></span><span class="esquina sd"></span><span class="esquina ii"></span><span class="esquina id"></span>
+      </div>
+      <img class="poste" src="img/poste.svg" alt="">
+      <h1 style="margin:0"><img class="logo" src="img/logo.png" alt="DondeRichard"></h1>
+      <img class="poste" src="img/poste.svg" alt="">
+    </div>
+    <p class="lema">Peluquería · Reserva tu cita</p>
+  </header>
+
+  <main>
+    <div id="reserva">
+      <section class="card" id="paso1">
+        <h2><span class="num">1</span> ¿Qué te hacemos?</h2>
+        <p class="sub">Elige un servicio.</p>
+        <div class="grid" id="servicios"></div>
+      </section>
+
+      <section class="card locked" id="paso2">
+        <h2><span class="num">2</span> ¿Con quién?</h2>
+        <p class="sub">Si te da igual, te asignamos al primero que esté libre.</p>
+        <div class="grid" id="peluqueros"></div>
+      </section>
+
+      <section class="card locked" id="paso3">
+        <h2><span class="num">3</span> Día y hora</h2>
+        <p class="sub" id="nota-sillas"></p>
+        <div class="dias" id="dias"></div>
+        <div class="horas" id="horas"></div>
+        <p class="vacio hidden" id="sin-horas">No quedan horas libres este día. Prueba con otro.</p>
+      </section>
+
+      <section class="card locked" id="paso4">
+        <h2><span class="num">4</span> Tus datos</h2>
+        <p class="sub">Solo para avisarte si hay algún cambio.</p>
+        <div class="resumen" id="resumen"></div>
+        <form id="form">
+          <label>Nombre <input name="nombre" autocomplete="name" required maxlength="80"></label>
+          <label>Teléfono <input name="telefono" type="tel" autocomplete="tel" required placeholder="600 123 456"></label>
+          <button class="btn" type="submit" id="btn-reservar">Confirmar cita</button>
+          <p class="error" id="error"></p>
+        </form>
+      </section>
+    </div>
+
+    <section class="card ok-box hidden" id="hecho">
+      <div class="check">✓</div>
+      <h2 style="justify-content:center;margin-top:12px">¡Cita reservada!</h2>
+      <p class="sub" id="hecho-texto"></p>
+      <p style="margin:0;font-size:14px">Tu código para consultar o cancelar:</p>
+      <div class="codigo" id="hecho-codigo"></div>
+      <p class="sub">Guárdalo (haz una captura de pantalla).</p>
+      <button class="btn sec" id="otra" type="button">Reservar otra cita</button>
+    </section>
+
+    <section class="card">
+      <details>
+        <summary>¿Necesitas cancelar una cita?</summary>
+        <form id="form-cancelar" style="margin-top:14px">
+          <label>Código de la cita <input name="codigo" required maxlength="6" style="text-transform:uppercase"></label>
+          <label>Teléfono con el que reservaste <input name="telefono" type="tel" required></label>
+          <button class="btn sec" type="submit">Cancelar cita</button>
+          <p class="error" id="error-cancelar"></p>
+        </form>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Horario</h2>
+      <div class="info" id="horario"></div>
+    </section>
+  </main>
+
+  <footer>DondeRichard</footer>
+
+<script src="maqueta.js"></script>
+<script src="reserva.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" fill="none" stroke="#b88a55" stroke-width="1.6" stroke-linecap="round">
+  <!-- esquina superior izquierda; las demás se obtienen girándola con CSS -->
+  <path d="M4 88 L4 34 Q4 4 34 4 L88 4"/>
+  <path d="M14 70 C14 40 22 22 44 16 C58 12 66 22 58 30 C52 36 42 30 48 24"/>
+  <path d="M30 14 C40 8 52 6 70 10"/>
+  <path d="M12 52 C8 40 10 28 16 22"/>
+</svg>

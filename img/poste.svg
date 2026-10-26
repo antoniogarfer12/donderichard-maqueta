@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 170" fill="none" stroke="#b88a55" stroke-width="3" stroke-linejoin="round">
+  <defs>
+    <pattern id="rayas" width="22" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(-38)">
+      <rect width="11" height="22" fill="#b88a55" stroke="none"/>
+    </pattern>
+  </defs>
+  <!-- remate superior -->
+  <path d="M15 26 Q15 6 30 6 Q45 6 45 26 Z"/>
+  <path d="M22 13 Q26 9 31 9" stroke-width="2"/>
+  <rect x="8" y="26" width="44" height="9" rx="4.5"/>
+  <!-- cuerpo con rayas -->
+  <rect x="15" y="35" width="30" height="100" fill="url(#rayas)"/>
+  <rect x="15" y="35" width="30" height="100"/>
+  <!-- remate inferior -->
+  <rect x="8" y="135" width="44" height="9" rx="4.5"/>
+  <path d="M15 144 Q15 164 30 164 Q45 164 45 144 Z"/>
+</svg>
