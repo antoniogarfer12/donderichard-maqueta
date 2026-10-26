@@ -13,16 +13,15 @@
       { id: 'corte', nombre: 'Corte de pelo', duracion: 30, precio: 15 },
       { id: 'barba', nombre: 'Arreglo de barba', duracion: 15, precio: 8 },
       { id: 'corte-barba', nombre: 'Corte + barba', duracion: 45, precio: 20 },
-      { id: 'degradado', nombre: 'Degradado / fade', duracion: 45, precio: 18 },
       { id: 'nino', nombre: 'Corte niño', duracion: 30, precio: 12 },
     ],
     horario: {
       0: [],
-      1: [['10:00', '14:00'], ['16:30', '20:30']],
-      2: [['10:00', '14:00'], ['16:30', '20:30']],
-      3: [['10:00', '14:00'], ['16:30', '20:30']],
-      4: [['10:00', '14:00'], ['16:30', '20:30']],
-      5: [['10:00', '14:00'], ['16:30', '20:30']],
+      1: [['10:00', '14:00'], ['17:00', '20:30']],
+      2: [['10:00', '14:00'], ['17:00', '20:30']],
+      3: [['10:00', '14:00'], ['17:00', '20:30']],
+      4: [['10:00', '14:00'], ['17:00', '20:30']],
+      5: [['10:00', '14:00'], ['17:00', '20:30']],
       6: [['10:00', '14:00']],
     },
     diasReservables: 21,
@@ -45,7 +44,7 @@
     const d = new Date(fecha + 'T00:00:00');
     const esHoy = fecha === iso(new Date());
     const ahora = new Date().getHours() * 60 + new Date().getMinutes() + 30;
-    const ocupacion = peluqueroId && peluqueroId !== 'cualquiera' ? 0.45 : 0.3;
+    const ocupacion = peluqueroId && peluqueroId !== 'cualquiera' ? 0.65 : 0.5;
     const res = [];
     for (const [a, b] of cfg.horario[d.getDay()] || []) {
       for (let ini = aMin(a); ini + srv.duracion <= aMin(b); ini += 15) {
