@@ -47,7 +47,7 @@
     const ocupacion = peluqueroId && peluqueroId !== 'cualquiera' ? 0.65 : 0.5;
     const res = [];
     for (const [a, b] of cfg.horario[d.getDay()] || []) {
-      for (let ini = aMin(a); ini + srv.duracion <= aMin(b); ini += 15) {
+      for (let ini = aMin(a); ini + srv.duracion <= aMin(b); ini += 30) {
         if (esHoy && ini < ahora) continue;
         if (azar(fecha + peluqueroId + Math.floor(ini / 30)) < ocupacion) continue; // simula citas ya cogidas
         res.push(aHora(ini));
